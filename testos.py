@@ -6,7 +6,7 @@ arr = os.listdir("c:\dicom")
 print(arr)
 '''
 
-#playing with single dicom file
+#playing with single dicom file v2
 '''
 #from pydicom.data import get_testdata_file
 #fpath = get_testdata_file("CT_small.dcm")
