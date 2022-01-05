@@ -6,21 +6,25 @@ arr = os.listdir("c:\dicom")
 print(arr)
 '''
 
-#playing with single dicom file
-'''
-#from pydicom.data import get_testdata_file
-#fpath = get_testdata_file("CT_small.dcm")
-fpath = ("c:\dicom\CT_small.dcm")
+#playing with single dicom file list patient name
+
+fpath = ("c:\dicomtst\CT_small.dcm")
 from pydicom import dcmread
 print(fpath)
 ds = dcmread(fpath)
 #print(ds)
-seq = ds[0x0010, 0x1002]
+seq = ds[0x0010, 0x0010]
 print(seq)
-'''
+elem = ds[0x0010, 0x0010]
+elem.value ='Otto^Matt'
+print (elem)
+ds.save_as("c:\dicomtst\CT_small.dcm")
+''''
+# read dicomdir and provide output
 from pydicom import dcmread
 from pydicom.fileset import FileSet
 path = ("c:\dicom\DICOMDIR")
 ds = dcmread(path)
 fs = FileSet(ds)
 print(fs)
+'''
