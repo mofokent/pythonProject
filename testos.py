@@ -6,7 +6,7 @@ arr = os.listdir("c:\dicom")
 print(arr)
 '''
 
-#playing with single dicom file list patient name123
+#playing with single dicom file list patient name
 
 fpath = ("c:\dicomtst\CT_small.dcm")
 from pydicom import dcmread
